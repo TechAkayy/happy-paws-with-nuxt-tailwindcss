@@ -6,7 +6,8 @@
     pg_background_urls['design-image']
 
   const { optimizeImage } = useOptimizeImage()
-  const { bgStyles } = optimizeImage(heroImageUrl)
+const { bgStyles } = optimizeImage(heroImageUrl)
+  
 </script>
 <template>
   <section class="container mx-auto pb-12 px-4">
