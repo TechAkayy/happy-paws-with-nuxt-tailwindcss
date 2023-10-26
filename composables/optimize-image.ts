@@ -26,10 +26,10 @@ export const useOptimizeImage = () => {
 
     // https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
     const responsiveImages = computed(() => {
-      // return imageOptimized.imageSizes.srcset
-      //   .split(', ')
-      //   .filter((imgUrl) => imgUrl.endsWith('768w') || imgUrl.endsWith('2560w'))
-      return [`${img(imageOptimized.imageSrc)}`]
+      return imageOptimized.imageSizes.srcset
+        .split(', ')
+        .filter((imgUrl) => imgUrl.endsWith('768w') || imgUrl.endsWith('2560w'))
+      // return [`${img(imageOptimized.imageSrc)}`]
     })
 
     const responsiveImageSrc = `url("${responsiveImages.value[0]}")`
