@@ -38,7 +38,7 @@
                 size="xl"
                 label="Adopt Now"
                 target="_blank"
-                to="https://github.com/pinegrow/happy-paws-with-nuxt-tailwindcss"
+                to="https://github.com/TechAkayy/happy-paws-with-nuxt-tailwindcss"
               >
                 <div class="inline-block ml-1 p-1.5 text-lg">Adopt Now</div>
                 <BaseIcon name="i-noto-dog-face" height="28px"></BaseIcon>

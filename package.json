@@ -4,7 +4,7 @@
   "homepage": "https://legendary-melomakarona-0f405b.netlify.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinegrow/happy-paws-with-nuxt-tailwindcss.git"
+    "url": "https://github.com/TechAkayy/happy-paws-with-nuxt-tailwindcss.git"
   },
   "scripts": {
     "dev": "nuxt dev",
