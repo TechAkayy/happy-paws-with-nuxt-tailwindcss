@@ -82,6 +82,7 @@ export default defineNuxtConfig({
         },
       },
     },
+    provider: 'netlify',
     netlify: {
       baseURL: url,
     },
