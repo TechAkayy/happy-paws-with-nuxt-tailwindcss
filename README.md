@@ -4,7 +4,7 @@ Nuxt 3 Fullstack (SPA-SSR) app for an pet adoption organisation. Pet data is fet
 
 This is a sample project created using the [Vue Designer Nuxt Tailwind CSS - Quick start template](https://github.com/pinegrow/pg-nuxt-tailwindcss).
 
-Demo - https://happy-paws-with-nuxt-tailwindcss.netlify.app/
+Demo - https://legendary-melomakarona-0f405b.netlify.app/
 
 ## Vue Designer
 

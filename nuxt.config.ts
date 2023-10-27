@@ -1,5 +1,7 @@
 // import { fileURLToPath, URL } from 'node:url'
 import presetIcons from '@unocss/preset-icons'
+import site from './site'
+const { url } = site
 
 export default defineNuxtConfig({
   // ssr: false,
@@ -79,6 +81,9 @@ export default defineNuxtConfig({
           height: 80,
         },
       },
+    },
+    netlify: {
+      baseURL: url,
     },
     domains: ['images.unsplash.com', 'fakestoreapi.com', 'res.cloudinary.com'],
     alias: {

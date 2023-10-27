@@ -1,7 +1,7 @@
 {
   "name": "happy-paws-with-nuxt-tailwindcss",
   "version": "0.0.0",
-  "homepage": "https://happy-paws-with-nuxt-tailwindcss.netlify.app",
+  "homepage": "https://legendary-melomakarona-0f405b.netlify.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/pinegrow/happy-paws-with-nuxt-tailwindcss.git"
@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "now": "npm run build && npm run preview",
-    "lighthouse": "npx unlighthouse --site https://happy-paws-with-nuxt-tailwindcss.netlify.app",
+    "lighthouse": "npx unlighthouse --site https://legendary-melomakarona-0f405b.netlify.app",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
