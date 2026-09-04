@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pr-tools",
+  "version": "1.0.0",
+  "description": "Authoring helpers for Git pull requests, starting with a prepare-pr skill.",
+  "keywords": ["git", "pull-request", "pr"]
+}
