@@ -3,9 +3,10 @@
   const heroDescription =
     'Find your new furry friend today! We have a wide variety of lovable pets available for adoption. Come visit us and take home your new best friend!'
 
-  // Real project artwork (designed with Vue Designer) shipped in /public
-  const heroImage = '/vue-designer.png'
-  const heroImageAlt = 'Happy Paws artwork designed with Vue Designer'
+  // Warm pet photography for the hero visual
+  const heroImage =
+    'https://images.unsplash.com/photo-1534361960057-19889db9621e?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDMwfHxkb2d8ZW58MHx8fHwxNjgzMjc1MDI1&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=1200&fit=crop'
+  const heroImageAlt = 'A happy rescue dog waiting for a loving home'
 
   const highlights = [
     { value: '1200+', label: 'Happy adoptions' },
@@ -101,7 +102,7 @@
           </div>
         </div>
 
-        <!-- Real Vue Designer artwork -->
+        <!-- Hero pet photo -->
         <div class="relative mx-auto w-full max-w-lg lg:max-w-none">
           <div
             aria-hidden="true"
