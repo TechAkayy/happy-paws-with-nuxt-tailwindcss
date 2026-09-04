@@ -69,9 +69,7 @@
               :alt="article.user.name"
               :src="article.user.profile_image"
             />
-            <div
-              class="flex flex-col items-start text-white dark:text-primary-800"
-            >
+            <div class="flex flex-col items-start text-white">
               <h6 class="whitespace-pre-wrap">{{ article.user.name }}</h6>
               <PostDate :date="article.published_at" />
             </div>

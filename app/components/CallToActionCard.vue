@@ -1,51 +1,66 @@
 <script setup>
-  const { img, action, to } = defineProps({
+  const { img, kicker, action, blurb, label, to } = defineProps({
     img: {
       type: String,
       required: true,
     },
+    kicker: {
+      type: String,
+      default: 'Get involved',
+    },
     action: {
       type: String,
       required: true,
+    },
+    blurb: {
+      type: String,
+      default: '',
+    },
+    label: {
+      type: String,
+      default: 'Learn more',
     },
     to: {
       type: String,
       required: true,
     },
   })
-
-  const { optimizeImage } = useOptimizeImage()
-  const imageOptimized = computed(() => {
-    return {
-      alt: action,
-      cover: true,
-      ...optimizeImage(
-        img,
-        /* options */
-        {
-          // placeholder: false, // placeholder image before the actual image is fully loaded.
-        },
-        true /* return bgStyles */,
-      ),
-    }
-  })
-
-  const bgStyles = imageOptimized.value.bgStyles
 </script>
 <template>
-  <div class="pb-4 px-4 rounded-3xl w-full sm:w-8/12 md:w-6/12 lg:w-4/12">
+  <NuxtLink
+    :to="to"
+    class="group relative block h-96 overflow-hidden rounded-3xl shadow-md ring-1 ring-black/5 transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-2xl dark:ring-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+  >
+    <NuxtImg
+      :src="img"
+      :alt="action"
+      loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+    />
     <div
-      class="bg-cover bg-no-repeat flex pb-4 pt-96 px-4 rounded-3xl"
-      :style="bgStyles"
+      class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-neutral-950/10"
+    />
+    <span
+      class="absolute top-5 left-5 rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-bold tracking-wider text-white uppercase ring-1 ring-white/25 backdrop-blur-sm"
     >
-      <NuxtLink :to="to" class="group mx-auto w-5/6">
-        <BaseButton size="xl" class="font-semibold rounded-lg w-full" block>
-          <div class="font-semibold my-2 text-center">
-            {{ action }}
-          </div>
-        </BaseButton>
-      </NuxtLink>
+      {{ kicker }}
+    </span>
+    <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7">
+      <h4 class="mb-2 text-white">{{ action }}</h4>
+      <p class="mb-6 text-sm leading-relaxed text-white/85 line-clamp-2">
+        {{ blurb }}
+      </p>
+      <span
+        class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-neutral-900 shadow-sm transition-colors duration-300 group-hover:bg-primary-500 group-hover:text-white"
+      >
+        {{ label }}
+        <span
+          aria-hidden="true"
+          class="transition-transform duration-300 group-hover:translate-x-1"
+          >&rarr;</span
+        >
+      </span>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 <style scoped></style>
